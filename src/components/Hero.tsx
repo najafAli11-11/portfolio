@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { GithubIcon } from './icons'
+import profileImg from '../assets/profile.jpeg'
 
 export function Hero() {
   const reduceMotion = useReducedMotion()
@@ -45,11 +46,22 @@ export function Hero() {
             Syed Najaf Haider
           </motion.h1>
 
+          <motion.div {...fade(0.12)} className="mt-5">
+            <img
+              src={profileImg}
+              alt="Portrait of Syed Najaf Haider"
+              width={96}
+              height={96}
+              loading="eager"
+              className="h-20 w-20 rounded-full border border-border object-cover shadow-sm sm:h-24 sm:w-24 dark:border-dark-border"
+            />
+          </motion.div>
+
           <motion.h2
             {...fade(0.2)}
             className="mt-4 text-xl font-medium text-accent sm:text-2xl dark:text-highlight"
           >
-            AI-focused backend developer
+            Full Stack Agentic AI Engineer
           </motion.h2>
 
           <motion.p
