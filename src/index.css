@@ -5,8 +5,39 @@
    so toggling the theme class has no visible effect. */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Distinctive professional display typeface (self-hosted, woff2 latin only). */
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../node_modules/@fontsource/sora/files/sora-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../node_modules/@fontsource/sora/files/sora-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../node_modules/@fontsource/sora/files/sora-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../node_modules/@fontsource/sora/files/sora-latin-700-normal.woff2") format("woff2");
+}
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --color-primary: #1a1a2e;
@@ -50,6 +81,12 @@
     @apply bg-surface text-text font-sans;
   }
 
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
   .dark body {
     @apply bg-dark-surface text-dark-text;
   }
@@ -78,7 +115,7 @@
 
 @layer utilities {
   .section-padding {
-    @apply px-6 py-20 md:px-8 lg:px-16 lg:py-28;
+    @apply px-6 py-24 md:px-8 lg:px-16 lg:py-32;
   }
 
   .container-narrow {
