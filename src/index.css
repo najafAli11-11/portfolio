@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode for Tailwind v4 (the `.dark` class on <html>).
+   Without this the `dark:` variant defaults to prefers-color-scheme media,
+   so toggling the theme class has no visible effect. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
