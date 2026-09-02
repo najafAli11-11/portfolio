@@ -6,7 +6,7 @@ export function Skills() {
     <section id="skills" className="section-padding bg-surface-dim dark:bg-dark-surface-dim">
       <div className="container-narrow">
         <Reveal>
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent dark:text-highlight">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-text-muted dark:text-dark-text-muted">
             Skills
           </h2>
           <p className="mt-3 max-w-2xl text-lg font-medium text-text dark:text-dark-text">

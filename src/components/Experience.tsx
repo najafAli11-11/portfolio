@@ -6,7 +6,7 @@ export function Experience() {
     <section id="experience" className="section-padding bg-surface-dim dark:bg-dark-surface-dim">
       <div className="container-narrow">
         <Reveal>
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent dark:text-highlight">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-text-muted dark:text-dark-text-muted">
             Experience
           </h2>
           <p className="mt-3 max-w-2xl text-lg font-medium text-text dark:text-dark-text">
@@ -28,7 +28,7 @@ export function Experience() {
                   <span
                     className={`block h-[11px] w-[11px] shrink-0 rounded-full border-2 md:h-[16px] md:w-[16px] ${
                       item.current
-                        ? 'border-accent bg-accent/30 dark:border-highlight dark:bg-highlight/30'
+                        ? 'border-text bg-text/30 dark:border-dark-text dark:bg-dark-text/30'
                         : 'border-border bg-surface dark:border-dark-border dark:bg-dark-surface'
                     }`}
                   />
@@ -42,7 +42,7 @@ export function Experience() {
                       {item.dates}
                     </span>
                   </div>
-                  <p className="mt-0.5 text-sm font-medium text-accent dark:text-highlight">
+                  <p className="mt-0.5 text-sm font-medium text-text-secondary dark:text-dark-text-secondary">
                     {item.org}
                   </p>
                   <ul className="mt-3 space-y-2">

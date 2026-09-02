@@ -7,7 +7,7 @@ export function Contact() {
     <section id="contact" className="section-padding bg-surface-dim dark:bg-dark-surface-dim">
       <div className="container-narrow">
         <Reveal>
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent dark:text-highlight">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-text-muted dark:text-dark-text-muted">
             Contact
           </h2>
         </Reveal>

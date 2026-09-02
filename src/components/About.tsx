@@ -5,7 +5,7 @@ export function About() {
     <section id="about" className="section-padding">
       <div className="container-narrow">
         <Reveal>
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent dark:text-highlight">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-text-muted dark:text-dark-text-muted">
             About
           </h2>
           <div className="mt-4 max-w-3xl space-y-5 text-base leading-relaxed text-text-secondary dark:text-dark-text-secondary">

@@ -11,26 +11,29 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <motion.article
       initial={reduceMotion ? false : { opacity: 0, y: 24 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+      whileHover={reduceMotion ? undefined : { y: -4 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.45, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
-      className={`group flex h-full flex-col rounded-2xl border border-border-subtle bg-surface transition-colors hover:border-border dark:border-dark-border-subtle dark:bg-dark-surface dark:hover:border-dark-border ${
-        project.featured ? 'border-accent/20 dark:border-highlight/20' : ''
+      className={`flex h-full flex-col rounded-2xl border bg-surface transition-colors duration-300 hover:border-border dark:bg-dark-surface dark:hover:border-dark-border ${
+        project.featured
+          ? 'border-border-subtle dark:border-dark-border-subtle'
+          : 'border-border-subtle dark:border-dark-border-subtle'
       }`}
     >
       <div className="flex flex-1 flex-col p-7">
         <div className="flex items-start justify-between gap-4">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border-subtle bg-surface-dim text-accent dark:border-dark-border-subtle dark:bg-dark-surface-dim dark:text-highlight">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border-subtle bg-surface-dim text-text-secondary dark:border-dark-border-subtle dark:bg-dark-surface-dim dark:text-dark-text-secondary">
             <Code2 className="h-5 w-5" />
           </div>
           {project.featured && (
-            <span className="rounded-full border border-accent/20 bg-accent/5 px-2.5 py-0.5 text-xs font-medium text-accent dark:border-highlight/20 dark:bg-highlight/10 dark:text-highlight">
+            <span className="rounded-full border border-border-subtle bg-surface-dim px-2.5 py-0.5 text-xs font-medium text-text-muted dark:border-dark-border-subtle dark:bg-dark-surface-dim dark:text-dark-text-muted">
               Featured
             </span>
           )}
         </div>
 
         <h3 className="mt-5 text-lg font-semibold text-text dark:text-dark-text">{project.name}</h3>
-        <p className="mt-1 text-sm font-medium text-accent dark:text-highlight">{project.tagline}</p>
+        <p className="mt-1 text-sm font-medium text-text-secondary dark:text-dark-text-secondary">{project.tagline}</p>
 
         <p className="mt-3 text-sm leading-relaxed text-text-secondary dark:text-dark-text-secondary">
           {project.description}
@@ -95,7 +98,7 @@ export function Projects() {
     <section id="projects" className="section-padding">
       <div className="container-narrow">
         <Reveal>
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent dark:text-highlight">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-text-muted dark:text-dark-text-muted">
             Projects
           </h2>
           <p className="mt-3 max-w-2xl text-lg font-medium text-text dark:text-dark-text">
