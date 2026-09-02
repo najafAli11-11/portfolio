@@ -58,9 +58,8 @@ export const projects: Project[] = [
       'Docker-ready full stack',
     ],
     techStack: ['React', 'TypeScript', 'FastAPI', 'Socket.IO', 'Claude', 'Whisper', 'Docker'],
-    highlights: ['Live demo', 'Full-stack', '3 languages'],
+    highlights: ['Full-stack', '3 languages'],
     githubUrl: 'https://github.com/najafAli11-11/AI-Screen-Assistant',
-    liveUrl: 'https://ai-screen-assistant-web-production.up.railway.app',
     featured: true,
   },
   {
